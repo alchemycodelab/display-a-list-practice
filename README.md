@@ -15,11 +15,3 @@
 9) Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
 10) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 11) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
-
-
-## To Run Cypress Tests
-* `npm install`
-* `npm test`
-* Cypress will open -- you should then click "run <#> integration spec(s)"
-    ![](cypress.png)
-* Make sure all tests pass
