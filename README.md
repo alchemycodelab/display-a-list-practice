@@ -50,7 +50,7 @@ Come up with a domain for this data (lie 'dogs' or 'candies'). Let's assume you 
         ```html
         <li class="candy-item">
             <h2>Twix</h2>
-            <p>A candy bar with chocolate caramel</p>
+            <p>chocolate caramel candy bar</p>
         </li>
         ```
 1.  Rename `render-one.js` to `render-candy.js` file for your candy array
