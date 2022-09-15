@@ -54,8 +54,8 @@ Come up with a domain for this data (lie 'dogs' or 'candies'). Let's assume you 
         </li>
         ```
 1.  Rename `render-one.js` to `render-candy.js` file for your candy array
-    -   For your array of objects, write a simple render function that accepts one object and returns a DOM elements.
-    -   This function should return an `<li>` element The outer div should have a css class of 'candy-item'.
+    -   Write a render function that accepts one object and returns DOM elements.
+    -   This function should return an `<li>` element with a css class of 'candy-item'.
     -   Create a minimum of two child elements (`h2`, `span`, `p` etc.) for putting in the properties of the object
 1.  In `app.js`:
     -   `import` your array and render function
