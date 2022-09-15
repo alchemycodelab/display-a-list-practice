@@ -17,8 +17,8 @@ Render 4 separate lists of things to the same index.html file. Minimally,
 -   one list should be a list of string,
 -   one should be a list of simple objects,
 -   one should be a list of objects where one property is a nested object,
--   and one should be a list of objects where one property is an array.
--   As a stretch goal, feel free to make all of them arrays of deep objects (with array and nested object properties).
+-   STRETCH:
+    -   and one should be a list of objects where one property is an array.
 
 ## Setup
 
