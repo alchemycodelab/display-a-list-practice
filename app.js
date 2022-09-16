@@ -1,8 +1,21 @@
-// import functions and grab DOM elements
+/* Imports */
+// import data and render function here:
 
-// initialize global state
+/* Get DOM Elements */
+// get list elements by id here:
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+/* Display Functions */
+// render a list of elements in each of the four functions
+
+function displayOne() {}
+
+function displayTwo() {}
+
+function displayThree() {}
+
+function displayFour() {}
+
+displayOne();
+displayTwo();
+displayThree();
+displayFour();
