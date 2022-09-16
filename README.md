@@ -84,15 +84,34 @@ In `index.html`:
 
 Rename `render-one.js` to `render-candy.js` file for your candy array
 
--   Write a render function that accepts one object and returns DOM elements.
--   This function should return an `<li>` element with a css class of 'candy-item'.
--   Create a minimum of two child elements (`h2`, `span`, `p` etc.) for putting in the properties of the object
+-   Write an exported render function with a name like `renderCandy` that accepts one object and returns DOM elements.
+-   This function should return an `<li>` element with a css class of `candy-item`.
+-   Create a minimum of two child elements (`h2`, `span`, `p` etc.) and use the object properties to correctly populate those elements
 
-Display Function
+```js
+export function renderCandy(candy) {
+    const li = document.createElement('li');
+    li.classList.add('candy-item');
 
-1.  In `app.js`:
-    -   `import` your array and render function
-    -   Grab the list element from the DOM.
-    -   Loop through your array, and for each object"
-        -   render a candy element using the render function
-        -   append the element to the container element you grabbed from the DOM
+    const headerEl = document.createElement('h2');
+    headerEl.textContent = candy.name;
+
+    const pEl = document.createElement('p');
+    pEl.textContent = candy.flavor + ' ' + candy.type;
+
+    li.append(headerEl, pEl);
+
+    return li;
+}
+```
+
+### 4) Display Function
+
+In `app.js`:
+
+-   `import` both your array and render function
+-   Grab the list element from the DOM. (`getElementById`)
+-   Rename the display function from `displayOne` to `displayCandies`
+-   In this function, loop through your array, and for each object:
+    -   render a candy element using the render function
+    -   append the element to the list element you grabbed from the DOM
