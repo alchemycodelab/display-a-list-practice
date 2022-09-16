@@ -12,13 +12,15 @@ Let's practice the 'display a list' and 'render function' patterns.
 
 ## Goal
 
-Render 4 separate lists of things to the same index.html file. Minimally,
+Render 4 separate lists of things to the same `index.html` file. Minimally,
 
--   one list should be a list of string,
--   one should be a list of simple objects,
--   one should be a list of objects where one property is a nested object,
--   STRETCH:
-    -   and one should be a list of objects where one property is an array.
+1.  One list should be a list of string,
+1.  One should be a list of simple objects,
+1.  One should be a list of objects where one property is a nested object,
+1.  Another list of of simple objects, or
+
+
+    - STRETCH: A list of objects where one property is an array. This means that you need to render a sub-list for each item in the main list!
 
 ## Setup
 
@@ -26,15 +28,15 @@ Start with the [list practice template repo](https://github.com/alchemycodelab/d
 
 ## Process
 
-Repeat the following process 4 times, with 4 different domains, all in the same template:
+Repeat the following process 4 times, with 4 different domains, all in the same repo
 
-> Note: do this process **one array at a time**. Do not write 4 arrays, then 4 render functions, etc. Please work through the first array, then the first render function, then the first display function.
+> Note: do this process **one array at a time**. Do not write 4 arrays, then 4 render functions, etc. Work through the first array, then the first render function, then the first display function.
 
-Come up with a domain for this data (lie 'dogs' or 'candies'). Let's assume you picked 'candies':
+Come up with a domain for this data (lie 'dogs' or 'candies'). Let's assume you picked 'candies' for your list of simple objects
 
 1.  Rename `array-one.js` to `candies-data.js`. In that data file:
-    -   create an exported variable with an array of at least 3 objects for that domain
-    -   (each object should have at least 3 properties)
+    -   Create an exported variable with an array of at least 3 objects for that domain
+    -   Each object should have at least 3 properties (unless you are doing the string list)
     -   Objects in the array should all have the same properties:
         ```js
         {
