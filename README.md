@@ -19,8 +19,7 @@ Render 4 separate lists of things to the same `index.html` file. Minimally,
 1.  One should be a list of objects where one property is a nested object,
 1.  Another list of of simple objects, or
 
-
-    - STRETCH: A list of objects where one property is an array. This means that you need to render a sub-list for each item in the main list!
+    -   STRETCH: A list of objects where one property is an array. This means that you need to render a sub-list for each item in the main list!
 
 ## Setup
 
@@ -34,31 +33,63 @@ Repeat the following process 4 times, with 4 different domains, all in the same 
 
 Come up with a domain for this data (lie 'dogs' or 'candies'). Let's assume you picked 'candies' for your list of simple objects
 
-1.  Rename `array-one.js` to `candies-data.js`. In that data file:
-    -   Create an exported variable with an array of at least 3 objects for that domain
-    -   Each object should have at least 3 properties (unless you are doing the string list)
-    -   Objects in the array should all have the same properties:
-        ```js
-        {
-            name: 'Twix',
-            flavor: 'chocolate caramel',
-            type: 'candy bar'
-        }
-        ```
-1.  In `index.html`:
-    -   Rename the header to your domain, e.g. `<h2>Candies</h2>`
-    -   Rename the `id` of your list container, e.g. `<ul id="candy-list"></ul>`
-    -   Design a `<li>` element, simple is best:
-        ```html
+### 1) Data
+
+Rename `array-one.js` to `candies-data.js`. In that data file:
+
+-   Create an exported variable with an array of at least 3 objects for that domain
+-   Each object should have at least 3 properties (unless you are doing the string list)
+-   Objects in the array should all have the same properties
+
+For example:
+
+```js
+export const candies = [
+    {
+        name: 'Twix',
+        flavor: 'chocolate caramel',
+        type: 'candy bar',
+    },
+    {
+        name: 'Bubblicious',
+        flavor: 'strawberry watermelon',
+        type: 'gum',
+    },
+    {
+        name: 'Smarties',
+        flavor: 'tart fruity',
+        type: 'waffers',
+    },
+];
+```
+
+### 2) HTML
+
+In `index.html`:
+
+-   Rename the header to your domain, e.g. `<h2>Candies</h2>`
+-   Rename the `id` of your list container, e.g. `<ul id="candy-list"></ul>`
+-   Design how the `<li>` element will look, so you have a target for the render function. Simple is best for this exercise!
+    ```html
+    <h2>Candies</h2>
+    <ul id="candy-list">
         <li class="candy-item">
             <h2>Twix</h2>
             <p>chocolate caramel candy bar</p>
         </li>
-        ```
-1.  Rename `render-one.js` to `render-candy.js` file for your candy array
-    -   Write a render function that accepts one object and returns DOM elements.
-    -   This function should return an `<li>` element with a css class of 'candy-item'.
-    -   Create a minimum of two child elements (`h2`, `span`, `p` etc.) for putting in the properties of the object
+    </ul>
+    ```
+
+### 3) Render Function
+
+Rename `render-one.js` to `render-candy.js` file for your candy array
+
+-   Write a render function that accepts one object and returns DOM elements.
+-   This function should return an `<li>` element with a css class of 'candy-item'.
+-   Create a minimum of two child elements (`h2`, `span`, `p` etc.) for putting in the properties of the object
+
+Display Function
+
 1.  In `app.js`:
     -   `import` your array and render function
     -   Grab the list element from the DOM.
